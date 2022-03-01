@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RSVP.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RSVP</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+ <%--   <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+    <style type="text/css">
+        #form1 {
+            height: 533px;
+        }
+        .auto-style1 {
+            height: 111px;
+        }
+        .auto-style2 {
+            width: 200px;
+            height: 111px;
+        }
+        .auto-style3 {
+            height: 268px;
+            width: 629px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <br />
+        <table class="auto-style3">
+            <tr>
+                <td colspan="2" style="height:100px">&nbsp;
+                    <%--Верхний колонтитул--%>
+                    <h2>RSVP</h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;
+                    Меню
+                </td>
+                <td class="auto-style1">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height:100px">&nbsp;
+                    Нижний колонтитул
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
