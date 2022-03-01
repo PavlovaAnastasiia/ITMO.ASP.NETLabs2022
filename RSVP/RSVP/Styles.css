@@ -37,7 +37,7 @@ table, td, th {
 }
 .footer_menuli {
     margin: 0px;
-    padding: 020px;
+    padding: 0 20px;
     display: inline;
     border-right: 1px solid #000000;
 }
