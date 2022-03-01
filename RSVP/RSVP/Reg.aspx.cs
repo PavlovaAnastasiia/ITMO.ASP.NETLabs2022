@@ -11,19 +11,25 @@ namespace RSVP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) 
-            { 
-                GuestResponse rsvp = new GuestResponse(name.Text, 
+            if (IsPostBack)
+            {
+                //осуществляет  проверку данных  при  выполнении  возврата  данных  веб-формы  на  сервер
+                if (IsPostBack)
+                {
+                    Page.Validate(); if (!Page.IsValid) return;
+                }
+
+                GuestResponse rsvp = new GuestResponse(name.Text,
                     email.Text, phone.Text, CheckBoxYN.Checked);
                 ResponseRepository.GetRepository().AddResponse(rsvp);
 
-                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value) 
-                { 
-                    Response.Redirect("seeyouthere.html"); 
-                } 
-                else 
-                { 
-                    Response.Redirect("sorryyoucantcome.html"); 
+                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
+                {
+                    Response.Redirect("seeyouthere.html");
+                }
+                else
+                {
+                    Response.Redirect("sorryyoucantcome.html");
                 }
             }
         }
