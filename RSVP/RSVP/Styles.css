@@ -35,4 +35,9 @@ table, td, th {
     text-align: left;
     margin: 10px 0;
 }
-
+.footer_menuli {
+    margin: 0px;
+    padding: 020px;
+    display: inline;
+    border-right: 1px solid #000000;
+}
