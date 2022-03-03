@@ -35,20 +35,20 @@
         </div>
         <div> 
             Введите название доклада:
-            <asp:TextBox ID="TextBoxTitle"runat="server"
+            <asp:TextBox ID= "TextBoxTitle" runat="server"
                 Width="345px"></asp:TextBox>
         </div>
         <div>Введите аннотацию доклада:
-            <asp:TextBox ID="TextBoxTextAnnot"runat="server"
+            <asp:TextBox ID= "TextBoxTextAnnot" runat="server"
                 Width="345px"></asp:TextBox>
         </div>
         <div> 
             Введите название доклада:
-            <asp:TextBox ID="TextBoxTitle2"runat="server"
+            <asp:TextBox ID= "TextBoxTitle2" runat="server"
                 Width="345px"></asp:TextBox>
         </div>
         <div>Введите аннотацию доклада:
-            <asp:TextBox ID="TextBoxAnnot2"runat="server"
+            <asp:TextBox ID= "TextBoxTextAnnot2" runat="server"
                 Width="345px"></asp:TextBox>
         </div>
         <div>
