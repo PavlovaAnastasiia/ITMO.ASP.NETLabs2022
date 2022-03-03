@@ -98,6 +98,7 @@
     <Compile Include="App_Data\GuestResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Data\ResponseRepository.cs" />
+    <Compile Include="App_Data\SampleContext.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
