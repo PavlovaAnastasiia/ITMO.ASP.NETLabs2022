@@ -21,7 +21,6 @@ namespace RSVP
 
                 GuestResponse rsvp = new GuestResponse(name.Text,
                     email.Text, phone.Text, CheckBoxYN.Checked);
-                ResponseRepository.GetRepository().AddResponse(rsvp);
 
                 if (CheckBoxYN.Checked)
                 {
@@ -35,7 +34,7 @@ namespace RSVP
                         TextBoxTextAnnot2.Text); 
                     rsvp.Reports.Add(report2); 
                 }
-
+                ResponseRepository.GetRepository().AddResponse(rsvp);
                 try 
                 { 
                     SampleContext context = new SampleContext(); 
@@ -44,7 +43,7 @@ namespace RSVP
                 } 
                 catch (Exception ex)
                 {
-                    Response.Redirect("Error " + ex.Message);
+                    Response.Write("Error " + ex.Message);
                 }
 
                 if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
