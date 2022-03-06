@@ -99,6 +99,8 @@
     </Compile>
     <Compile Include="Models\Circle.cs" />
     <Compile Include="Models\ModelClass.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonRepository.cs" />
     <Compile Include="Models\StudyCsharp.cs" />
     <Compile Include="Models\Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +108,10 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\My\Index.cshtml" />
+    <Content Include="Views\My\InputData.cshtml" />
+    <Content Include="Views\My\Hello.cshtml" />
+    <Content Include="Views\My\ListPerson.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
