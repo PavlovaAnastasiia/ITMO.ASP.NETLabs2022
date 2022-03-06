@@ -1,8 +1,9 @@
 ﻿@model WebMVCR1.Models.Person
 
-@{
-    Layout = null;
-}
+@*@{
+    Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "Главная";
+}*@
 
 <!DOCTYPE html>
 
@@ -13,7 +14,7 @@
 </head>
 <body>
     <div>
-        <form method ="post">
+        @*<form method ="post">
         <table>
             <tr>
             <td><p>Введите имя:</p></td>
@@ -27,7 +28,22 @@
             <td>
                 </td></tr>
             </table>
-        </form>
+        </form>*@
+        @using (Html.BeginForm() )
+         {
+            <table>
+                <tr>
+                <td><p>Введите имя:</p></td>
+                <td>@Html.TextBox("FirstName")</td>
+                    </tr>
+                    <tr>
+                <td><p>Введите фамилию:</p></td>
+                <td>@Html.TextBoxFor(x => x.LastName)</td>
+                        </tr>
+                    <tr><td><input type = "submit" value= "Отправить" />
+            </td><td></td></tr>
+                </table>
+         }
     </div>
 </body>
 </html>
