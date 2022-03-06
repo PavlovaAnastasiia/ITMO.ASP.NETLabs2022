@@ -44,8 +44,9 @@ namespace WebMVCR1.Controllers
             goldBankAccount.accBal = (decimal)3200.00; 
             goldBankAccount.accNo = 123;
 
-            string res = String.Format("Номер счета {0}, баланс {1}, тип {2}", 
-                goldBankAccount.accNo, goldBankAccount.accBal, goldBankAccount.accType); 
+            //string res = String.Format("Номер счета {0}, баланс {1}, тип {2}", 
+            //    goldBankAccount.accNo, goldBankAccount.accBal, goldBankAccount.accType); 
+            string res = String.Format("Информация о банковском счете: {0}", goldBankAccount);
             return res;
         }
     }
