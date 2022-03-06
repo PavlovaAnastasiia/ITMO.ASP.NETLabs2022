@@ -25,7 +25,9 @@ namespace WebMVCR1.Controllers
             //string res = StudyCsharp.SetStatus(3);
             //string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
             //string res = StudyCsharp.GetFunction(0, 9);
-            string res = ExeFactorial(5);
+            //string res = ExeFactorial(5);
+            //string res = ExeTriangle();
+            string res = ExeCircle();
             return res;
         }
 
@@ -56,12 +58,26 @@ namespace WebMVCR1.Controllers
 
         public string ExeFactorial(int x)
         {
-            int f; 
+            int f;
             bool ok = StudyCsharp.Factorial(x, out f);
-            if (ok) 
-                return String.Format("Факториал числа {0} равен {1} ", x, f); 
-            else 
-                return"Невозможно вычислить факториал";
+            if (ok)
+                return String.Format("Факториал числа {0} равен {1} ", x, f);
+            else
+                return "Невозможно вычислить факториал";
+        }
+        public string ExeTriangle()
+        {
+            Triangle tr1 = new Triangle(3, 5, 6);
+            string sq1 = String.Format("Площадь фигуры {0} равна: " +
+                "{1:0.##}", tr1.Name, tr1.Area); 
+            return sq1;
+        }
+        public string ExeCircle() 
+        { 
+            Circle cir1 = new Circle(3); 
+            string sq = String.Format("Площадь фигуры {0} равна: {1:0.##}", 
+                cir1.Name, cir1.Area); 
+            return sq; 
         }
     }
 }
