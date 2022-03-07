@@ -251,9 +251,13 @@ th {
   .label {
     border: 1px solid #000;
   }
-  .table {
-    border-collapse: collapse !important;
-  }
+    .table {
+        border-collapse: collapse !important;
+
+        border: 6px solid silver;
+        vertical-align: middle;
+        text-align: center;
+    }
   .table td,
   .table th {
     background-color: #fff !important;

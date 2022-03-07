@@ -5,7 +5,7 @@
 
 <h2>CreateBid</h2>
 <h3>Существующие заявки</h3>
-<table>
+<table class ="table">
     <tr>
         <td><p>Имя</p></td>
         <td><p>Тип кредита </p></td>
@@ -20,23 +20,29 @@
 </table>
 <h3>Форма подачи заявки по программам кредитования</h3>
 <form method="post" action="">
-    <table>
+    <table class ="table">
         <tr>
             <td><p>Введите свое имя</p></td>
             <td>
                 <input type="text" name="Name" />
             </td>
         </tr>
-        <tr><td><p>Выберите из списка тип кредита :</p></td>
-        <td><select name ="CreditHead">
-           @foreach (var cr in ViewBag.Credits)
-                {
-                <option>@cr.Head</option>
-                }
-            </select>
+        <tr>
+            <td><p>Выберите из списка тип кредита :</p></td>
+            <td>
+                <select name="CreditHead">
+                    @foreach (var cr in ViewBag.Credits)
+                    {
+                        <option>@cr.Head</option>
+                    }
+                </select>
             </td>
         </tr>
-        <tr><td><input type ="submit" value="Отправить" />
-            </td><td></td></tr>
+        <tr>
+            <td>
+                <input type="submit" value="Отправить" />
+            </td>
+            <td></td>
+        </tr>
     </table>
 </form>
