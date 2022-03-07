@@ -19,19 +19,19 @@ namespace MvcCreditApp1.Controllers
             return View();
         }
 
-        private void GiveCredits() 
-        { 
-            var allCredits = db.Credits.ToList<Credit>(); 
-            ViewBag.Credits = allCredits; 
+        private void GiveCredits()
+        {
+            var allCredits = db.Credits.ToList<Credit>();
+            ViewBag.Credits = allCredits;
         }
 
-        [HttpGet] 
-        public ActionResult CreateBid() 
-        { 
-            GiveCredits(); 
-            var allBids = db.Bids.ToList<Bid>(); 
-            ViewBag.Bids = allBids; 
-            return View(); 
+        [HttpGet]
+        public ActionResult CreateBid()
+        {
+            GiveCredits();
+            var allBids = db.Bids.ToList<Bid>();
+            ViewBag.Bids = allBids;
+            return View();
         }
 
         [HttpPost]
@@ -42,11 +42,11 @@ namespace MvcCreditApp1.Controllers
             db.Bids.Add(newBid);
             // Сохраняем в БД все изменения
             db.SaveChanges();
-            return "Спасибо, <b>"+ newBid.Name+ "</b>, за выбор нашего банка. " +
+            return "Спасибо, <b>" + newBid.Name + "</b>, за выбор нашего банка. " +
                 "Ваша заявка будет рассмотрена в течении 10 дней.";
         }
 
-            public ActionResult About()
+        public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
@@ -58,6 +58,16 @@ namespace MvcCreditApp1.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult BidSearch(string name)
+        {
+            var allBids = db.Bids.Where(a => a.CreditHead.Contains(name)).ToList();
+            if (allBids.Count == 0)
+            {
+                return Content("Указанный кредит " + name + " не найден!");//return HttpNotFound();
+            }
+            return PartialView(allBids);
         }
     }
 }

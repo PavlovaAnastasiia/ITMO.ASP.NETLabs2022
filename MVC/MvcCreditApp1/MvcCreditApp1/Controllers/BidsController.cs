@@ -16,8 +16,8 @@ namespace MvcCreditApp1.Controllers
         private CreditContext db = new CreditContext();
 
         // GET: Bids
-        [OutputCache(Duration = 60, Location = 
-            OutputCacheLocation.ServerAndClient)]
+        //[OutputCache(Duration = 60, Location = 
+        //    OutputCacheLocation.ServerAndClient)]
         public ActionResult Index()
         {
             return View(db.Bids.ToList());
