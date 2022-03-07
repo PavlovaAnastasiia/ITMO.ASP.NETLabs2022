@@ -24,7 +24,7 @@ namespace MvcCreditApp1.Controllers
             var allCredits = db.Credits.ToList<Credit>();
             ViewBag.Credits = allCredits;
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult CreateBid()
         {
