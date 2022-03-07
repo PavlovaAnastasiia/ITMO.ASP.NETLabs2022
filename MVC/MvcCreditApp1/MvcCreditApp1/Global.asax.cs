@@ -1,4 +1,5 @@
-﻿using MvcCreditApp1.Models;
+﻿
+using MvcCreditApp1.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -20,6 +21,7 @@ namespace MvcCreditApp1
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer(new CreditsDbInitializer());
+            Database.SetInitializer<Fluent.Infrastructure.FluentModel.ApplicationDbContext>(new AppDbInitializer());
         }
     }
 }
